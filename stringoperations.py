@@ -1,9 +1,8 @@
 s=input("enter your string")
 def countletters(s):
-    c=0
     n=len(s)
-    c=c+n
-    print("number of letters in the string",c)
+    print("the string is",s)
+    print("number of letters in the string is",n)
 def capital(s):
     t=s.upper()
     print(t)
@@ -17,31 +16,57 @@ def pali(s):
         c=c+s[i]
     print(c)
     if s==c:
-        print("entered string is not palindrome")
+        print("entered string is a palindrome")
     else:
-        print("entered string is  a palindrome")
+        print("entered string is  a not palindrome")
 def repeat(s):
     t=int(input("how many times the string should repeat"))
-    print(s*t)
-op=True
-while op:
+    v=s*t
+    for i in range(0,len(v),len(s)):
+        print(v[i:i+t-1])
+def reverse(s):
+    n=len(s)
+    for i in range(n-1,-1,-1):
+        print(s[i],end=" ")
+def asccode(s):
+    n=len(s)
+    for i in range(0,n):
+        print(s[i]," ",ord(s[i]))
+def vowelcount(s):
+    t=len(s)
+    c=0
+    for i in t:
+        if i=="A" or i=="E" or i=="I" or i=="O" or i=="U" or i=="e" or i=="a" or i=="i" or i=="o" or i=="u":
+            c+=1
+    print("number of vowel letters in the string is",c)        
+op=1
+while op!=8:
     print("1.countletters")
     print("2.capital")
     print("3.small")
-    print("4.pali")
+    print("4.palindrome")
     print("5.repeat")
-    print("6.quit")
-    option=int(input("enter number of options"))
-    if option==1:
+    print("6.reverse")
+    print("7.ascii code")
+    print("8.vowel count")
+    print("9.quit")
+    op=int(input("enter number of options"))
+    if op==1:
         countletters(s)
-    elif option==2:
+    elif op==2:
         capital(s)
-    elif option==3:
+    elif op==3:
         small(s)
-    elif option==4:
+    elif op==4:
         pali(s)
-    elif option==5:
+    elif op==5:
         repeat(s)
+    elif op==6:
+        reverse(s)
+    elif op==7:
+        asccode(s)
+    elif op==8:
+        vowelcount(s)
     
         
         
