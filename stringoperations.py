@@ -5,9 +5,15 @@ def countletters(s):
     print("number of letters in the string is",n)
 def capital(s):
     t=s.upper()
+    print("The original string is")
+    print(s)
+    print("The converted string is")
     print(t)
 def small(s):
     t=s.lower()
+    print("The original string is")
+    print(s)
+    print("The converted string is")
     print(t)
 def pali(s):
     n=len(s)
@@ -26,6 +32,7 @@ def repeat(s):
         print(v[i:i+t-1])
 def reverse(s):
     n=len(s)
+    print("The original string is"," ",s) 
     for i in range(n-1,-1,-1):
         print(s[i],end=" ")
 def asccode(s):
@@ -50,7 +57,7 @@ while op!=8:
     print("7.ascii code")
     print("8.vowel count")
     print("9.quit")
-    op=int(input("enter number of options"))
+    op=int(input("select the option which should perform"))
     if op==1:
         countletters(s)
     elif op==2:
